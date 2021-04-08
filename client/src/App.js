@@ -19,10 +19,12 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Welcome to Will's API</h1>
-        <h2>Fetch data from /api/</h2>
-      </header>
+      <div className='container'>
+        <div className='card'>
+          <h1>Welcome to Will's API</h1>
+          <h2><a href="https://wb-heroku-app.herokuapp.com/api/" target="_blank">Fetch data from <span>/api/</span></a></h2>
+        </div>
+      </div>
     </div>
   );
 }

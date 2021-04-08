@@ -14,17 +14,33 @@ server.listen(port, ()=>{
     console.log(`Listening on Port ${port}`)
 })
 
-server.use('/api', (_,res)=>{ // the _ is like # for dead link or placeholder
+server.use('/api/', (_,res)=>{ // the _ is like # for dead link or placeholder
     res.json({
-                data:'API is accounted for.',
-                testing: [1,2,3,4,5,6,7,8,9,0],
-                thisIsData: 212,
-                LoTRCharacter:{
-                    name: "Frodo",
-                    quest: "Take the Ring to Mordor.",
-                    friend: "Samwise",
-                    location: "Middle Earth"
-                }
+                data:[{
+                        confirmation: 'API is accounted for.',
+                        testing: [1,2,3,4,5,6,7,8,9,0],
+                        thisIsData: 212,
+                        LoTRCharacter:[{
+                                name: "Frodo",
+                                quest: "Take the Ring to Mordor.",
+                                friend: "Samwise",
+                                location: "Middle Earth"
+                        }],
+                        FavoriteColors:[{
+                            red: false,
+                            green: false,
+                            blue: true,
+                            orange: true,
+                            purple: false,
+                            black: false,
+                            white: false,
+                            violet: false,
+                            pink: false
+                        }],
+                        Dogs:[
+                            "Doggo", "Scrubs", "Woofwoof", "Chief", "George", "Max", "Lisa", "Roof", "Sparky"
+                        ]
+                }]
             })
 })
 //Above is where you store your API Data! :)
