@@ -16,7 +16,15 @@ server.listen(port, ()=>{
 
 server.use('/api', (_,res)=>{ // the _ is like # for dead link or placeholder
     res.json({
-                data:'API is accounted for.'
+                data:'API is accounted for.',
+                testing: [1,2,3,4,5,6,7,8,9,0],
+                thisIsData: 212,
+                LoTRCharacter:{
+                    name: "Frodo",
+                    quest: "Take the Ring to Mordor.",
+                    friend: "Samwise",
+                    location: "Middle Earth"
+                }
             })
 })
 //Above is where you store your API Data! :)

@@ -20,7 +20,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {data}
+        <h1>Welcome to Will's API</h1>
+        <h2>Fetch data from /api/</h2>
       </header>
     </div>
   );
