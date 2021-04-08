@@ -8,10 +8,19 @@ function url(path){
 }
 
 function App() {
+  const [data, setData] = useState('Hi')
+  useEffect(()=>{
+    // setData(data+"!")
+    fetch(url('/api'))
+    .then(resp => resp.json()) //turn the receives data into json
+    .then(apiData => setData(apiData.data)) //set our data in state
+  },[])
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Will's React App</h1>
+        {data}
       </header>
     </div>
   );
